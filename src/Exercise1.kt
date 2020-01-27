@@ -18,6 +18,8 @@ fun checkFormat(cnpj: String): Boolean {
     if(cnpj.length != 18) {
         return false
     }
-    val cnpjNumbersOnly = cnpj.replace(".", "").replace("/", "").replace("-", "")
+    val cnpjNumbersOnly = toNumbersOnlyCNPJ(cnpj)
     return cnpj[2] == '.' && cnpj[6] == '.' && cnpj[10] == '/' && cnpj[15] == '-' && checkNumbersOnly(cnpjNumbersOnly)
 }
+
+fun toNumbersOnlyCNPJ(cnpj: String) = cnpj.replace(".", "").replace("/", "").replace("-", "")
