@@ -1,5 +1,4 @@
 import geometric.forms.Point
-import geometric.forms.Rectangle
 import kotlin.math.abs
 
 fun main() {
