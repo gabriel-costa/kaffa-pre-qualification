@@ -28,7 +28,7 @@ fun validateCNPJ(cnpj: String): Boolean {
 private fun findValidatorDigit(numbersOnlyCNPJ: String): Int {
     var sum = 0
     var multiplicand = 2
-    // basically going through the reversed CNPJ multiplicating each number of it by a multiplicand
+    // basically going through the reversed CNPJ multiplying each number of it by a multiplicand
     // that starts at 2 and increases by 1 per iteration and if it reaches 9, it starts on 2 again
     for (currentNumber in numbersOnlyCNPJ.reversed()) {
         sum += currentNumber.toString().toInt() * multiplicand
