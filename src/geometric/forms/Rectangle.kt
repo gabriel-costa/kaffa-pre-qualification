@@ -11,6 +11,7 @@ class Rectangle(private val pos: Point, private val height: Int, private val wid
         if (!intersects(rect))
             return 0
         var area: Int = 0
+        // testing four possible intersection cases
         if (pos.x + width > rect.pos.x && pos.x < rect.pos.x) {
             if (pos.y > rect.pos.y - height && pos.y < rect.pos.y) {
                 area = (pos.y - (rect.pos.y - rect.height) + 1) * ((pos.x + width) - rect.pos.x + 1)
