@@ -1,5 +1,5 @@
-package exercise3
-
+import geometric.forms.Point
+import geometric.forms.Rectangle
 import kotlin.math.abs
 
 fun main() {
@@ -25,7 +25,7 @@ fun main() {
 }
 
 // this function finds out the "pos" point, as illustrated in Rectangle.kt, given the two points forming a rectangle
-private fun getRectangle(p1: Point, p2: Point, height: Int, width: Int): Rectangle =
+fun getRectangle(p1: Point, p2: Point, height: Int, width: Int): Rectangle =
         if (p1.x < p2.x) {
             if (p1.y > p2.y) {
                 Rectangle(p1, height, width)
