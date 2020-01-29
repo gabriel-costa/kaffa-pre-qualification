@@ -1,3 +1,5 @@
+package main
+
 import geometric.forms.Point
 import geometric.forms.Rectangle
 import kotlin.math.abs

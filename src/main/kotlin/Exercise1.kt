@@ -1,3 +1,5 @@
+package main
+
 fun main() {
     val cnpj = readLine()
 

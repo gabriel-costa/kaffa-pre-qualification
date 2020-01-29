@@ -1,3 +1,5 @@
+package main
+
 import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser
 import java.net.URL
@@ -17,7 +19,7 @@ fun main() {
 //    }
 }
 
-private fun getDateTime(): Pair<String, String> {
+fun getDateTime(): Pair<String, String> {
     // getting the content of http://worldclockapi.com/api/json/utc/now and parsing it
     val content: Any? = URL("http://worldclockapi.com/api/json/utc/now").readText()
     val json = JSONParser().parse(content.toString()) as JSONObject

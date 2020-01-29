@@ -1,3 +1,5 @@
+package main
+
 fun main() {
     val cnpj = readLine()
     if (checkFormat(cnpj!!) and validateCNPJ(cnpj))
@@ -7,7 +9,7 @@ fun main() {
 }
 
 fun validateCNPJ(cnpj: String): Boolean {
-    // mask already validated on checkFormat, so we'll work only with the validator digits
+    // mask already validated on main.checkFormat, so we'll work only with the validator digits
     var numbersOnlyCNPJ = toNumbersOnlyCNPJ(cnpj)
 
     // extracting the supposed validator digits that came with the CNPJ
