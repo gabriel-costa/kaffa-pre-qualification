@@ -13,6 +13,7 @@ class Exercise7 : HttpServlet() {
         res.contentType = "text/html"
         val out = res.writer
         val json = JSONObject()
+        // getting the datetime and then returning it
         val dateTime = getDateTime()
         json["currentDateTime"] = dateTime.first
         json["timeZone"] = dateTime.second
