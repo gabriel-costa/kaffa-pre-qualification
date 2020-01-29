@@ -4,7 +4,7 @@ import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser
 import java.net.URL
 
-// for this one you will need the org.json library which I downloaded here: http://www.java2s.com/Code/Jar/j/Downloadjsonsimple111jar.htm
+// for this one you will need the json-simple-1.1.1.jar to parse json
 fun main() {
     val (dateTime, timeZone) = getDateTime()
     val splitDateTime = dateTime.split(" ")
