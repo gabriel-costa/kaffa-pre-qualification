@@ -3,11 +3,13 @@ package main
 import java.io.File
 import java.io.FileWriter
 
+private val filePath = "src/main/kotlin/TodoList.txt"
+
 fun main() {
     var input = ""
     while (input != "3") {
         // reading the list from a file and printing it
-        val toDoList = File("src/TodoList.txt").readLines()
+        val toDoList = File(filePath).readLines()
         println("------------ TO DO LIST ------------")
         toDoList.forEachIndexed { index, item ->
             println("${index + 1}- $item")
@@ -19,7 +21,7 @@ fun main() {
         println("3 - Quit")
         input = readLine()!!
 
-        val fwAppend = FileWriter("src/TodoList.txt", true)
+        val fwAppend = FileWriter(filePath, true)
         // inserting an item
         if (input == "1") {
             println("Write what you want to add:")
@@ -38,7 +40,7 @@ fun main() {
             val mutableToDoList = toDoList.toMutableList()
             println("You removed: ${mutableToDoList.removeAt(indexToBeRemoved.toInt() - 1)}")
             // deleting the content of the file
-            val fwOverWriter = FileWriter("src/TodoList.txt")
+            val fwOverWriter = FileWriter(filePath)
             if (mutableToDoList.isNotEmpty()) {
                 fwOverWriter.write(mutableToDoList[0])
             }
